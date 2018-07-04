@@ -1,0 +1,17 @@
+<essence-global-header>
+    <essence-global-navigation
+        [horizontal]="true"
+        [navigation]="navigationArray"
+    ></essence-global-navigation>
+</essence-global-header>
+
+<main class="appContainer">
+    <div class="appWrapper">
+        <router-outlet></router-outlet>
+    </div>
+</main>
+
+<essence-global-footer
+    [socials]="socials"
+    [contactEmails]="contactEmails"
+></essence-global-footer>

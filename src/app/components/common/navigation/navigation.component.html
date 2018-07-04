@@ -1,0 +1,21 @@
+<nav class="navigationMenu clearfix" [class.loggedIn]="isLoggedIn">
+    <ul>
+        <li
+            *ngFor="let nav of navigation"
+            class="navElement"
+            [class.horizontal]="horizontal"
+            [class.icon]="icon"
+            [ngClass]="nav.iconClass"
+        >
+            <a
+                class="navMenuItem"
+                [routerLink]="nav.link"
+                [routerLinkActive]="['active']"
+                [ngClass]="{ 'active': selectedIndex === nav.index }"
+                (click)="setActive(nav.link, nav.index)"
+            >
+                <span class="navMenuItemLabel">{{ nav.menuLabel }}</span>
+            </a>
+        </li>
+    </ul>
+</nav>

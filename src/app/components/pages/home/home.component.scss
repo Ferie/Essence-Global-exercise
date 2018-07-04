@@ -1,0 +1,42 @@
+@import '../../../../styles.scss';
+
+.searchContainer {
+    margin: rem(32) rem(16) rem(16);
+}
+
+.searchForm {
+    float: right;
+}
+
+.searchInput,
+.searchButton {
+    float: left;
+}
+
+.searchInput {
+    border-color: $light-blue;
+    max-width: rem(160);
+}
+
+.searchButton {
+    @include retina-background-image('search-icon', 'png');
+    background-position: center;
+    background-size: rem(32);
+    margin: 0;
+    height: rem(48);
+    width: rem(48);
+}
+
+.noData {
+    display: block;
+    font-size: rem(32);
+    font-weight: $bold;
+    color: $light-blue;
+    margin: rem(48) 0;
+    text-align: center;
+    width: 100%;
+
+    > .noDataWrapper {
+        padding: 0 rem(32);
+    }
+}

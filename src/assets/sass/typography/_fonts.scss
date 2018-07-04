@@ -1,0 +1,73 @@
+// Typography
+
+// Import font
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+// Font extensions
+%base-font {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+%text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+$base-number: 16;
+$base-font-size: 17px;
+$base-line-height: 1;
+
+// Font weights
+$light: 100;
+$regular: 300;
+$bold: 700;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: 1.2;
+
+// Typography classes
+.heading {
+    margin-bottom: rem(16);
+    text-align: center;
+}
+
+.highlight {
+    color: $light-blue;
+}
+
+.bold {
+    font-weight: $bold;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    white-space: initial;
+}
+
+.wordBreak {
+    word-break: break-all;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.leftText {
+    text-align: left;
+}
+
+.rightText {
+    text-align: right;
+}

@@ -1,0 +1,161 @@
+// Form fields
+
+$field-background-colour: $whiteF8;
+$field-border-colour: $light-grey;
+$field-text-colour: $grey;
+$field-text-focus-colour: $dark-grey;
+$invalid-field-colour: $red;
+$invalid-field-background-colour: rgba(255, 195, 38, 0.05);
+$invalid-text-size: rem(14);
+$invalid-text-field-colour: $red;
+$field-placeholder-colour: $light-grey;
+
+.formField {
+    margin: 0 0 em(40) 0;
+    padding: 0;
+}
+
+%focusStyling {
+    border-color: $field-text-focus-colour;
+    color: $field-text-focus-colour;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    @extend %base-font;
+    @include box-sizing;
+    display: inline-block;
+    background-color: $field-background-colour;
+    border: rem(1) solid $field-border-colour;
+    // border-radius: $border-radius;
+    font-size: $base-font-size;
+    color: $field-text-colour;
+    outline: none;
+    padding: rem(13) rem(20);
+    width: 100%;
+
+    &.inline {
+        width: auto;
+    }
+
+    &:focus {
+        @extend %focusStyling;
+        background-color: $field-background-colour;
+    }
+}
+
+select {
+    //background-color: scale-color($field-text-colour, $lightness: 95%);
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+    background-position: 99% center;
+    background-repeat: no-repeat;
+    padding: em(7) em(24) em(7) em(12);
+    -webkit-appearance: none;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    background-color: $invalid-field-background-colour;
+    border: rem(1) solid $invalid-field-colour;
+}
+
+.input-errors-container {
+    position: relative;
+}
+
+.input-error {
+    @include svg-icons(yellow_error_icon);
+    position: absolute;
+    top: em(5);
+    font-size: $invalid-text-size;
+    color: $invalid-text-field-colour;
+    padding-left: rem(24);
+}
+
+/* csslint ignore:start */
+:-webkit-autofill {
+    -webkit-text-fill-color: $field-text-colour;
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+
+    &:focus {
+        -webkit-text-fill-color: $field-text-focus-colour;
+    }
+}
+
+:-moz-autofill {
+    -moz-text-fill-color: $field-text-colour;
+    -moz-box-shadow: 0 0 0 1000px $white inset;
+
+    &:focus {
+        -webkit-text-fill-color: $field-text-focus-colour;
+    }
+}
+
+:-o-autofill {
+    -o-text-fill-color: $field-text-colour;
+    -o-box-shadow: 0 0 0 1000px $white inset;
+
+    &:focus {
+        -webkit-text-fill-color: $field-text-focus-colour;
+    }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $field-placeholder-colour;
+}
+
+:-moz-placeholder { /* Firefox 4-18 */
+    color: $field-placeholder-colour;
+    opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: $field-placeholder-colour;
+    opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $field-placeholder-colour;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: $field-placeholder-colour;
+}
+
+/*** Custom arrow on HTML tag select only for IE8, IE9 ***/
+/*** display none for this following element is for all the other browsers ***/
+.selectTagWrapper:before {
+    display: none;
+}
+
+.lt-ie9 .selectTagWrapper,
+.ie9 .selectTagWrapper {
+    position: relative;
+    border: rem(1) solid $field-border-colour;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lt-ie9 .selectTagWrapper:before,
+.ie9 .selectTagWrapper:before {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 95%;
+    font-size: em(5);
+    width: 100%;
+}
+
+.lt-ie9 .selectTagWrapper > select,
+.ie9 .selectTagWrapper > select {
+    border: none;
+    width: 125%;
+}

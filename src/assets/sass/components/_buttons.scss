@@ -1,0 +1,37 @@
+// Buttons
+
+$button-colour: $light-blue;
+$button-text-colour: $white;
+$button-disabled-colour: $light-grey;
+
+.button {
+    @extend %base-font;
+    @include transition(ease, 500ms, background-color);
+    display: block;
+    background-color: $button-colour;
+    border: 0;
+    font-size: rem(16);
+    color: $button-text-colour;
+    cursor: pointer;
+    outline: none;
+    padding: rem(14);
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    -webkit-tap-highlight-color: $transparent;
+
+    &:hover {
+        @include transition(ease, 500ms, background-color);
+        background-color: scale-color($button-colour, $lightness: 5%);
+    }
+
+    &:active {
+        @include transition(ease, 500ms, background-color);
+        background-color: scale-color($button-colour, $lightness: -5%);
+    }
+
+    &[disabled] {
+        @include transition(ease, 500ms, background-color);
+        background-color: $button-disabled-colour;
+    }
+}

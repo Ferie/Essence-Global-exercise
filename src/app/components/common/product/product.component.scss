@@ -1,0 +1,18 @@
+@import '../../../../styles.scss';
+
+.productBox {
+    // display: flex;
+    border: rem(1) solid $light-grey;
+    margin: rem(16);
+    padding: rem(16);
+}
+
+.sortTitle {
+    cursor: pointer;
+}
+
+@include media-breakpoint-up(sm) {
+    .productBox {
+        padding: rem(32);
+    }
+}
