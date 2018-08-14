@@ -1,0 +1,41 @@
+<section class="pageLayout">
+    <div class="searchContainer clearfix">
+        <div class="searchForm">
+            <input
+                type="search"
+                name="searchField"
+                class="searchInput"
+                placeholder="Search..."
+                [(ngModel)]="queryString"
+            >
+            <button
+                class="button searchButton"
+                type="button"
+            ></button>
+        </div>
+    </div>
+
+    <essence-global-product
+        [products]="data"
+        [queryString]="queryString"
+        *ngIf="!!data"
+    ></essence-global-product>
+
+    <div *ngIf="loading">
+        <essence-global-overlay></essence-global-overlay>
+    </div>
+
+    <div class="noData" *ngIf="!data">
+        <div class="noDataWrapper">
+            No products found...
+            <span *ngIf="!serverError">
+                Data maight be empty!
+            </span>
+            <span *ngIf="serverError">
+                <br>
+                <br>There were an error in the sending the request to the server.
+                <br>Please try again!
+            </span>
+        </div> 
+    </div>
+</section>
