@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-    @Input() private socials: Array<Object>;
-    @Input() private contactEmails: Array<Object>;
+    @Input() public socials: Array<Object>;
+    @Input() public contactEmails: Array<Object>;
 }

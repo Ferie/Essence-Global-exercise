@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { Data } from '../../../interfaces';
+
 import { SearchPipe, OrderByPipe } from '../../../pipes';
 
 @Component({
@@ -8,9 +10,9 @@ import { SearchPipe, OrderByPipe } from '../../../pipes';
     styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
-    @Input() public products: Array<Object>;
+    @Input() public products: Array<Data>;
     @Input() public queryString: string;
-    private orderBy: string;
+    public orderBy: string;
 
     constructor() {
         this.orderBy = 'code';

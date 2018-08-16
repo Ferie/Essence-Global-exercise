@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     public navigationArray: Array<Object>;
-    private socials: Array<Object>;
-    private contactEmails: Array<Object>;
+    public socials: Array<Object>;
+    public contactEmails: Array<Object>;
 
     /**
      * Pass the navigation array to the component.

@@ -9,7 +9,7 @@ export class NavigationComponent {
     @Input() private horizontal: boolean;
     @Input() private icon: boolean;
     @Input() public navigation: Array<Object>;
-    private isLoggedIn = !!sessionStorage.getItem('session_data');
+    public isLoggedIn = !!sessionStorage.getItem('session_data');
     private selectedIndex: number;
 
     /**
