@@ -12,15 +12,13 @@ import { Data } from '../../../interfaces';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    private data: any;
+    public data: any;
     public loading: boolean;
     public serverError: boolean;
+    public queryString: any;
     private orderBy = 'code';
 
-    constructor(
-        private dataService: DataService,
-        public pageTitle: Title
-    ) {
+    constructor(private dataService: DataService, public pageTitle: Title) {
         this.pageTitle.setTitle('Home Page - Essence Global');
     }
 

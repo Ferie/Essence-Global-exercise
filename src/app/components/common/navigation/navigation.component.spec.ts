@@ -43,12 +43,12 @@ describe('NavigationComponent', () => {
         expect(component).toBeTruthy();
     });
 
-//     it('should insert an `active` class in the DOM to the element just clicked', () => {
-//         const links = fixture.debugElement.queryAll(By.css('a'));
-//         expect(links.length).toBeGreaterThan(0);
-//         const link = links[0].nativeElement;
-//         link.click();
-//         fixture.detectChanges();
-//         expect(link.className).toContain('active');
-//     });
+    xit('should insert an `active` class in the DOM to the element just clicked', () => {
+        const links = fixture.debugElement.queryAll(By.css('a'));
+        expect(links.length).toBeGreaterThan(0);
+        const link = links[0].nativeElement;
+        link.click();
+        fixture.detectChanges();
+        expect(link.className).toContain('active');
+    });
 });

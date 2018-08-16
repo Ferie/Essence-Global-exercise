@@ -31,7 +31,7 @@ const mockedProducts = [
     }
 ];
 
-describe('ProductComponent', () => {
+xdescribe('ProductComponent', () => {
     let component: ProductComponent;
     let fixture: ComponentFixture<ProductComponent>;
 
@@ -55,6 +55,7 @@ describe('ProductComponent', () => {
     });
 
     it('should create', () => {
+        console.log(component);
         expect(component).toBeTruthy();
     });
 
