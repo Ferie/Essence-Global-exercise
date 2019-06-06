@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ed7b81e6-ebb6-40be-84ca-a0e4eec87367/deploy-status)](https://app.netlify.com/sites/essence-global-interview-exercise/deploys)
+
 # Essence Global FE Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
