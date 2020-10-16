@@ -1,0 +1,50 @@
+// Body Settings
+
+// Body custom variables
+$line-height: 1.1;
+$border-radius: rem(4);
+$background-color: $whiteF8;
+$font-color: $grey;
+$android-box-shadow-bottom: 0 rem(2) rem(4) rgba(0, 0, 0, 0.05);
+$android-box-shadow-top: 0 rem(-2) rem(4) rgba(0, 0, 0, 0.05);
+$android-box-shadow-left: rem(2) 0 rem(4) rgba(0, 0, 0, 0.05);
+$android-box-shadow-right: rem(-2) 0 rem(4) rgba(0, 0, 0, 0.05);
+
+// Body custom classes
+html {
+    height: 100%; // Needed to have the background image in the authentication layout
+}
+
+body {
+    @extend %base-font;
+    background-color: $background-color;
+    font-size: $base-font-size;
+    color: $font-color;
+    line-height: $line-height;
+    height: 100%; // Needed to have the background image in the authentication layout
+    -webkit-text-size-adjust: 100%; // Disable Safari resizes text on orientation change
+}
+
+.appContainer {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: rem(1600);
+}
+
+.appWrapper {
+    position: relative;
+    padding: rem(80) 0 rem(188);
+}
+
+.pageTitle {
+    position: absolute;
+    top: em(-9000);
+    left: em(-9000);
+}
+
+@include media-breakpoint-up(sm) {
+    .appWrapper {
+        padding: rem(80) rem(16) rem(188);
+    }
+}

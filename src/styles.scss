@@ -1,21 +1,21 @@
 // Vendors
-@import "./assets/sass/vendor/reset";
-@import "./assets/sass/vendor/animate.3.5.2";
-@import "./assets/sass/vendor/bootstrap/import-bootstrap";
+@import "./sass/vendor/reset";
+@import "./sass/vendor/animate.3.5.2";
+@import "./sass/vendor/bootstrap/import-bootstrap";
 
 // Modules
-@import "./assets/sass/modules/mixins";
-@import "./assets/sass/modules/functions";
+@import "./sass/modules/mixins";
+@import "./sass/modules/functions";
 
 // Typography
-@import "./assets/sass/typography/colors";
-@import "./assets/sass/typography/fonts";
+@import "./sass/typography/colors";
+@import "./sass/typography/fonts";
 
 // Page setting
-@import "./assets/sass/base/body-settings";
-@import "./assets/sass/base/generals";
+@import "./sass/base/body-settings";
+@import "./sass/base/generals";
 
 // Components
-@import "./assets/sass/components/inputs";
-@import "./assets/sass/components/buttons";
-@import "./assets/sass/components/links";
+@import "./sass/components/inputs";
+@import "./sass/components/buttons";
+@import "./sass/components/links";

@@ -1,0 +1,50 @@
+// Colours
+
+$white: #FFF;
+$whiteF8: #F8F8F8;
+$dark-grey: #4A555A;
+$grey: #8F9598;
+$light-grey: #BFC2C3;
+$light-blue: #00b0b9;
+$green: #00A052;
+$red: #e50b0b;
+$black: #000;
+$off-black: #272727;
+
+$transparent: rgba(0, 0, 0, 0);
+
+.white {
+    color: $white;
+}
+
+.whiteF8 {
+    color: $whiteF8;
+}
+
+.darkGrey {
+    color: $dark-grey;
+}
+
+.grey {
+    color: $grey;
+}
+
+.lightGrey {
+    color: $light-grey;
+}
+
+.lightBlue {
+    color: $light-blue;
+}
+
+.green {
+    color: $green;
+}
+
+.black {
+    color: $black;
+}
+
+.offBlack {
+    color: $off-black;
+}
